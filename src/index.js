@@ -76,6 +76,18 @@ function getLectures(name) {
           itemData = el('h2', 'contentHeading');
           itemData.innerText = data;
           contentItem.appendChild(itemData);
+        } else if (type === 'quote') {
+          const quoteEle = el('blockquote', 'blockQuote');
+          const pEle = el('p', 'pQuote');
+          pEle.innerText = data;
+          quoteEle.appendChild(pEle);
+          contentItem.appendChild(quoteEle);
+        } else if (type === 'list') {
+          const ulEle = el('ul', 'ulList');
+          const liEle = el('li', 'liList');
+          liEle.innerText = data;
+          ulEle.appendChild(liEle);
+          contentItem.appendChild(ulEle);
         } else if (type === 'youtube') {
           itemData = el('iframe', 'contentYoutube');
           itemData.setAttribute('src', data);
