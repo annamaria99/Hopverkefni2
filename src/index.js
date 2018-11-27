@@ -10,7 +10,8 @@ function el(type, className) {
 
 function getLectures(name) {
   const request = new XMLHttpRequest();
-  request.open('GET', 'http://localhost:3000/lectures.json', true);
+  const baseURL = window.location.host;
+  request.open('GET', `http://${baseURL}/lectures.json`, true);
 
   request.onload = function requestLoad() {
     if (request.status >= 200 && request.status < 400) {
