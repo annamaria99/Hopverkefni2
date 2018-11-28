@@ -2,7 +2,7 @@
 npm install --save-dev rollup
 npm install --save-dev rollup
 npm install --save-dev @babel/core @babel/cli @babel/preset-env
-npm install --save-dev rollup-plugin-babel 
+npm install --save-dev rollup-plugin-babel
 */
 
 import babel from 'rollup-plugin-babel';
