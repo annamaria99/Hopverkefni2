@@ -1,3 +1,9 @@
+/* Keyra með:
+npm install --save-dev rollup
+npm install --save-dev @babel/core @babel/cli @babel/preset-env
+npm install --save-dev rollup-plugin-babel
+*/
+
 import babel from 'rollup-plugin-babel';
 
 module.exports = {
