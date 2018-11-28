@@ -14,7 +14,7 @@
     "rollup-watch": "rollup -c -w",
     "babel": "babel src --out-dir dist",
     "babel-watch": "babel src --out-dir dist --watch",
-    "dev": "concurrently npm:sass npm:sass-watch npm:browser-sync"
+    "dev": "concurrently npm:rollup npm:sass npm:sass-watch npm:browser-sync"
   },
   "keywords": [],
   "author": "",
