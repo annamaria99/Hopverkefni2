@@ -29,25 +29,25 @@ function getLectures(name) {
         }
       });
 
+      // Element fyrir Category & Title
+      const category = lecture.category;
+      const title = lecture.title;
+      const catelement = el('h2', 'category');
+      const titleelement = el('h1', 'title');
+      const headerElement = el('div', 'headerElement');
+      catelement.innerText = category;
+      titleelement.innerText = title;
+      headerElement.appendChild(catelement);
+      headerElement.appendChild(titleelement);
+      document.querySelector('header').appendChild(headerElement);
+
       // Element fyrir header Image
       const imageURL = lecture.image;
       if (imageURL !== undefined) {
         const imgelement = el('img', 'headerImage');
         imgelement.setAttribute('src', `http://${baseURL}/${imageURL}`);
-        document.querySelector('header').appendChild(imgelement);
+        headerElement.appendChild(imgelement);
       }
-
-      // Element fyrir Category
-      const category = lecture.category;
-      const catelement = el('p', 'category');
-      catelement.innerText = category;
-      document.querySelector('header').appendChild(catelement);
-
-      // Element fyrir Title
-      const title = lecture.title;
-      const titleelement = el('h1', 'title');
-      titleelement.innerText = title;
-      document.querySelector('header').appendChild(titleelement);
 
       const container = el('div', 'container');
       // Element fyrir Content
@@ -132,8 +132,8 @@ function getFrontpage() {
         // Element fyrir Category & Title
         const category = lecture.category;
         const title = lecture.title;
-        const catelement = el('div', 'category');
-        const titleelement = el('div', 'title');
+        const catelement = el('h3', 'category');
+        const titleelement = el('h2', 'title');
         const titleCategory = el('div', 'titleCategory');
         catelement.innerText = category;
         titleelement.innerText = title;
