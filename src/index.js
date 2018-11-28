@@ -129,18 +129,18 @@ function getFrontpage() {
           lectureItem.appendChild(thumbelement);
         }
 
-        // Element fyrir Category
+        // Element fyrir Category & Title
         const category = lecture.category;
-        const catelement = el('div', 'category');
-        catelement.innerText = category;
-        lectureItem.appendChild(catelement);
-        lectureItem.classList.add(category);
-
-        // Element fyrir Title
         const title = lecture.title;
+        const catelement = el('div', 'category');
         const titleelement = el('div', 'title');
+        const titleCategory = el('div', 'titleCategory');
+        catelement.innerText = category;
         titleelement.innerText = title;
-        lectureItem.appendChild(titleelement);
+        titleCategory.appendChild(catelement);
+        titleCategory.appendChild(titleelement);
+        lectureItem.classList.add(category);
+        lectureItem.appendChild(titleCategory);
 
         container.appendChild(lectureItem);
       });
