@@ -29,26 +29,25 @@ function getLectures(name) {
         }
       });
 
-      // Create elements for all content
       // Element fyrir header Image
       const imageURL = lecture.image;
       if (imageURL !== undefined) {
         const imgelement = el('img', 'headerImage');
         imgelement.setAttribute('src', `http://${baseURL}/${imageURL}`);
-        document.body.appendChild(imgelement);
+        document.querySelector('header').appendChild(imgelement);
       }
 
       // Element fyrir Category
       const category = lecture.category;
       const catelement = el('p', 'category');
       catelement.innerText = category;
-      document.body.appendChild(catelement);
+      document.querySelector('header').appendChild(catelement);
 
       // Element fyrir Title
       const title = lecture.title;
       const titleelement = el('h1', 'title');
       titleelement.innerText = title;
-      document.body.appendChild(titleelement);
+      document.querySelector('header').appendChild(titleelement);
 
       const container = el('div', 'container');
       // Element fyrir Content
@@ -99,7 +98,7 @@ function getLectures(name) {
         }
         container.appendChild(contentItem);
       });
-      document.body.appendChild(container);
+      document.querySelector('main').appendChild(container);
     }
   };
 
@@ -130,13 +129,13 @@ function getFrontpage() {
 
         // Element fyrir Category
         const category = lecture.category;
-        const catelement = el('p', 'category');
+        const catelement = el('div', `category__${category}`);
         catelement.innerText = category;
         lectureItem.appendChild(catelement);
 
         // Element fyrir Title
         const title = lecture.title;
-        const titleelement = el('p', 'title');
+        const titleelement = el('div', 'title');
         titleelement.innerText = title;
         lectureItem.appendChild(titleelement);
 
