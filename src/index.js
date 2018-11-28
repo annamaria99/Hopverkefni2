@@ -83,9 +83,11 @@ function getLectures(name) {
           contentItem.appendChild(quoteEle);
         } else if (type === 'list') {
           const ulEle = el('ul', 'ulList');
-          const liEle = el('li', 'liList');
-          liEle.innerText = data;
-          ulEle.appendChild(liEle);
+          data.forEach((listItem) => {
+            const liEle = el('li', 'liList');
+            liEle.innerText = listItem;
+            ulEle.appendChild(liEle);
+          });
           contentItem.appendChild(ulEle);
         } else if (type === 'youtube') {
           itemData = el('iframe', 'contentYoutube');
@@ -148,6 +150,29 @@ function getFrontpage() {
 
   request.send();
 }
+
+// Reyna að gera function á klára fyrirlestu takka
+// eslint-disable-next-line no-unused-vars
+
+
+/* Reyna að savea function í local storage
+function save() {
+  const checkbox = document.getElementById('button__finish');
+  localStorage.setItem('button__finish', checkbox.checked);
+}
+
+function load() {
+  const checked = JSON.parse(localStorage.getItem('button__finish'));
+  document.getElementById('button__finish').checked = checked;
+}
+
+function wis() {
+  location.reload();
+  localStorage.clear();
+}
+
+load(); */
+
 
 document.addEventListener('DOMContentLoaded', () => {
   const page = document.querySelector('body');
