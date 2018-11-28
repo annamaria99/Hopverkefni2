@@ -32,12 +32,12 @@ h1, h2, h3 {
 
 // TODO import
 
-/* The "show" class is added to the filtered elements */
+// Adda "show" á filteruð element
 .show {
   display: block;
 }
 
-/* Style the buttons */
+// Útil á button
 .button {
 border: none;
 outline: none;
@@ -46,12 +46,12 @@ background-color: #f1f1f1;
 cursor: pointer;
 }
 
-/* Add a light grey background on mouse-over */
+// Grátt hover á takka
 .button:hover {
 background-color: #ddd;
 }
 
-/* Add a dark background to the active button */
+// Dökkur bakgrunnur á active takka
 .button.active {
 background-color: #666;
 color: white;
