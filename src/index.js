@@ -131,9 +131,10 @@ function getFrontpage() {
 
         // Element fyrir Category
         const category = lecture.category;
-        const catelement = el('div', `category__${category}`);
+        const catelement = el('div', 'category');
         catelement.innerText = category;
         lectureItem.appendChild(catelement);
+        lectureItem.classList.add(category);
 
         // Element fyrir Title
         const title = lecture.title;
@@ -151,28 +152,59 @@ function getFrontpage() {
   request.send();
 }
 
-// Reyna að gera function á klára fyrirlestu takka
-// eslint-disable-next-line no-unused-vars
 
-
-/* Reyna að savea function í local storage
-function save() {
-  const checkbox = document.getElementById('button__finish');
-  localStorage.setItem('button__finish', checkbox.checked);
+/* Fykta við að gera filter....
+function filterSelection(c) {
+  const x = document.getElementsById('buttonContainer');
+  let i;
+  if (c === 'all') {
+    c = '';
+  }
+  // Bæta við og fjarlægja "Show" class
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], 'show');
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], 'show');
+  }
 }
 
-function load() {
-  const checked = JSON.parse(localStorage.getItem('button__finish'));
-  document.getElementById('button__finish').checked = checked;
+// Sýna filtered element
+function w3AddClass(element, name) {
+  let i; let arr1; let
+    arr2;
+  arr1 = element.className.split(' ');
+  arr2 = name.split(' ');
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {
+      element.className += ` ${arr2[i]}`;
+    }
+  }
 }
 
-function wis() {
-  location.reload();
-  localStorage.clear();
+// Fela element sem eru ekki valin
+function w3RemoveClass(element, name) {
+  let i; let arr1; let
+    arr2;
+  arr1 = element.className.split(' ');
+  arr2 = name.split(' ');
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);
+    }
+  }
+  element.className = arr1.join(' ');
 }
 
-load(); */
-
+// Add active class to the current control button (highlight it)
+const btnContainer = document.getElementById('buttonContainer');
+const btns = btnContainer.getElementsByClassName('button');
+for (let i = 0; i < btns.length; i++) {
+  btns[i].addEventListener('click', function () {
+    const current = document.getElementsByClassName('active');
+    current[0].className = current[0].className.replace(' active', '');
+    this.className += ' active';
+  });
+}
+*/
 
 document.addEventListener('DOMContentLoaded', () => {
   const page = document.querySelector('body');
@@ -180,11 +212,31 @@ document.addEventListener('DOMContentLoaded', () => {
   const paramsString = window.location.search;
 
   if (isLecturePage) {
+    // Event listener fyrir button
+    const finishButton = document.querySelector('.button__finish');
+
+    finishButton.addEventListener('click', () => {
+      const finishText = document.querySelector('#finishText');
+      if (finishText.innerHTML === '✓ Fyrirlestur kláraður') {
+        document.getElementById('finishText').innerHTML = 'Klára fyrirlestur!';
+      } else {
+        document.getElementById('finishText').innerHTML = '✓ Fyrirlestur kláraður';
+      }
+    });
+
     if (paramsString === '') return;
     const searchParams = new URLSearchParams(paramsString);
     getLectures(searchParams.get('slug'));
   } else {
     getFrontpage();
+
+    // Event listener fyrir Button
+    const buttonHTML = document.querySelector('.btnHTML');
+
+    buttonHTML.addEventListener('click', () => {
+
+    });
+    /* filterSelection('all'); */
     /* const list = new List();
     list.load(); */
   }
