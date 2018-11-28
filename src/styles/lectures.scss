@@ -1,5 +1,12 @@
 @import "config";
 
+main {
+    margin: 0 auto;
+    max-width: $max-width;
+    padding-left: $gutter;
+    padding-right: $gutter;
+}
+
 .header {
     background-image: url("../img/header.jpg");
     display: flex;
@@ -38,7 +45,20 @@
 
 .frontContainer {
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
-    margin: $gutter;
 }
+
+.lectureItem {
+    width: 350px;
+    height: 300px;
+    margin-bottom: $gutter;
+    margin-right: $gutter;
+    display: flex;
+    word-wrap: break-word;
+    flex-direction: column;
+    background-color: #ccc;
+}
+
+
 
