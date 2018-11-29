@@ -5,14 +5,16 @@ main {
     max-width: $max-width;
 }
 
-@media screen and (max-width: 500px) {
+@media (max-width: 500px) {
     .lectureItem {
     width: 100%;
+    flex-direction: row;
     }
     
     .frontContainer {
         width: 100%;
         flex-wrap: nowrap;
+        flex-direction: column;
 }
 }
 
