@@ -2,15 +2,25 @@
 
 ## Til að keyra verkefnið:
 
-    npm install concurrently --save-dev
+npm install concurrently --save-dev
 
-    npm run dev
+npm run dev
 
 ## Uppsetning verkefnis
+
+Verkefninu er skipt upp í þær möppur sem okkur var gefið. 
+/src mappan er skipt upp í /styles þar sem scss skrárnar okkar eru og í /lib þar sem JavaScript skrárnar okkar eru.
+Í /img möppunni eru myndirnar sem notaðar voru.
+
+Við skrifuðum scss-ið okkar í tveimur skrám, lectures.scss, sem hefur útlitið á forsíðunni, og svo styles.scss sem hefur útlitið á fyrirlestrarsíðunni.
+
+Allur JavaScript kóðinn okkar var skrifaður í index.js, en svo voru helpers.js og list.js með hjálparföll.
 
 ## Þeir sem unnu verkefnið
 
 Anna María Steingrímsdóttir - ams58@hi.is - github: annamaria99
+
+Marta Indriðadóttir - mai11@gi.is - github: MartaVidar
 
 Ómar Valur Jónasson - ovj3@hi.is - github: mariodawg
 
