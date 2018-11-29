@@ -12,6 +12,10 @@ main {
     width: 100%;
     justify-content: center;
     background-color: rgba(255,255,255,0.4);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 .header__content {
@@ -114,7 +118,8 @@ a.lectureItem {
     width: 92%;
     max-width: 100%;
     flex-direction: row;
-    margin: $gutter;
+    margin-left: $gutter;
+    margin-right: $gutter;
     }
     
     .frontContainer {
