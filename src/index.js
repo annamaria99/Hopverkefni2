@@ -158,60 +158,6 @@ function getFrontpage() {
   request.send();
 }
 
-
-/* Fykta við að gera filter....
-function filterSelection(c) {
-  const x = document.getElementsById('buttonContainer');
-  let i;
-  if (c === 'all') {
-    c = '';
-  }
-  // Bæta við og fjarlægja "Show" class
-  for (i = 0; i < x.length; i++) {
-    w3RemoveClass(x[i], 'show');
-    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], 'show');
-  }
-}
-
-// Sýna filtered element
-function w3AddClass(element, name) {
-  let i; let arr1; let
-    arr2;
-  arr1 = element.className.split(' ');
-  arr2 = name.split(' ');
-  for (i = 0; i < arr2.length; i++) {
-    if (arr1.indexOf(arr2[i]) == -1) {
-      element.className += ` ${arr2[i]}`;
-    }
-  }
-}
-
-// Fela element sem eru ekki valin
-function w3RemoveClass(element, name) {
-  let i; let arr1; let
-    arr2;
-  arr1 = element.className.split(' ');
-  arr2 = name.split(' ');
-  for (i = 0; i < arr2.length; i++) {
-    while (arr1.indexOf(arr2[i]) > -1) {
-      arr1.splice(arr1.indexOf(arr2[i]), 1);
-    }
-  }
-  element.className = arr1.join(' ');
-}
-
-// Add active class to the current control button (highlight it)
-const btnContainer = document.getElementById('buttonContainer');
-const btns = btnContainer.getElementsByClassName('button');
-for (let i = 0; i < btns.length; i++) {
-  btns[i].addEventListener('click', function () {
-    const current = document.getElementsByClassName('active');
-    current[0].className = current[0].className.replace(' active', '');
-    this.className += ' active';
-  });
-}
-*/
-
 document.addEventListener('DOMContentLoaded', () => {
   const page = document.querySelector('body');
   const isLecturePage = page.classList.contains('lecture-page');
@@ -244,7 +190,6 @@ document.addEventListener('DOMContentLoaded', () => {
     buttonHTML.addEventListener('click', () => {
 
     });
-    /* filterSelection('all'); */
     /* const list = new List();
     list.load(); */
   }
