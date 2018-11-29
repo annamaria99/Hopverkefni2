@@ -2,17 +2,15 @@
 
 ## Til að keyra verkefnið:
 
-npm install concurrently --save-dev
+    npm install concurrently --save-dev
 
-npm run dev
+    npm run dev
 
 ## Uppsetning verkefnis
 
 ## Þeir sem unnu verkefnið
 
 Anna María Steingrímsdóttir - ams58@hi.is - github: annamaria99
-
-Marta Indriðadóttir - mai11@gi.is - github: MartaVidar
 
 Ómar Valur Jónasson - ovj3@hi.is - github: mariodawg
 
