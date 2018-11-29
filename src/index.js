@@ -12,10 +12,12 @@ function el(type, className) {
   return element;
 }
 
+
 function getLectures(name) {
   const request = new XMLHttpRequest();
-  const baseURL = window.location.href;
-  request.open('GET', `http://${baseURL}/lectures.json`, true);
+  const baseURL = `http://${window.location.host}/`;
+  // const baseURL = 'https://notendur.hi.is/ovj3/Vefforritun/Hopverkefni2/';
+  request.open('GET', `${baseURL}lectures.json`, true);
 
   request.onload = function requestLoad() {
     if (request.status >= 200 && request.status < 400) {
@@ -47,7 +49,7 @@ function getLectures(name) {
       const imageURL = lecture.image;
       if (imageURL !== undefined) {
         const imgelement = el('img', 'headerImage');
-        imgelement.setAttribute('src', `http://${baseURL}/${imageURL}`);
+        imgelement.setAttribute('src', `${baseURL}${imageURL}`);
         headerElement.appendChild(imgelement);
       }
 
@@ -62,7 +64,7 @@ function getLectures(name) {
         let itemData;
         if (type === 'image') {
           itemData = el('img', 'fyrirlesturImage');
-          itemData.setAttribute('src', `http://${baseURL}/${data}`);
+          itemData.setAttribute('src', `${baseURL}${data}`);
           const captionText = item.caption;
           const caption = el('figcaption', 'caption');
           caption.innerText = captionText;
@@ -115,8 +117,9 @@ function getLectures(name) {
 
 function getFrontpage() {
   const request = new XMLHttpRequest();
-  const baseURL = window.location.host;
-  request.open('GET', `http://${baseURL}/lectures.json`, true);
+  const baseURL = `http://${window.location.host}/`;
+  // const baseURL = 'https://notendur.hi.is/ovj3/Vefforritun/Hopverkefni2/';
+  request.open('GET', `${baseURL}lectures.json`, true);
 
   request.onload = function requestLoad() {
     if (request.status >= 200 && request.status < 400) {
@@ -125,13 +128,13 @@ function getFrontpage() {
 
       response.lectures.forEach((lecture) => {
         const lectureItem = el('a', 'lectureItem');
-        lectureItem.setAttribute('href', `http://${baseURL}/fyrirlestur.html?slug=${lecture.slug}`);
+        lectureItem.setAttribute('href', `${baseURL}fyrirlestur.html?slug=${lecture.slug}`);
 
         // Element fyrir Thumbnail
         const thumbnail = lecture.thumbnail;
         if (thumbnail !== undefined) {
           const thumbelement = el('img', 'thumbnail');
-          thumbelement.setAttribute('src', `http://${baseURL}/${thumbnail}`);
+          thumbelement.setAttribute('src', `${baseURL}${thumbnail}`);
           lectureItem.appendChild(thumbelement);
         }
 
