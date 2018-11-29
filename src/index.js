@@ -14,7 +14,7 @@ function el(type, className) {
 
 function getLectures(name) {
   const request = new XMLHttpRequest();
-  const baseURL = window.location.host;
+  const baseURL = window.location.href;
   request.open('GET', `http://${baseURL}/lectures.json`, true);
 
   request.onload = function requestLoad() {
