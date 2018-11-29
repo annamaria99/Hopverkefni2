@@ -132,8 +132,8 @@ function getFrontpage() {
         // Element fyrir Category & Title
         const category = lecture.category;
         const title = lecture.title;
-        const catelement = el('h3', 'category');
-        const titleelement = el('h2', 'title');
+        const catelement = el('div', 'category');
+        const titleelement = el('div', 'title');
         const titleCategory = el('div', 'titleCategory');
         catelement.innerText = category;
         titleelement.innerText = title;
