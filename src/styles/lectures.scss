@@ -55,6 +55,7 @@ main {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-between;
 
     @media (max-width: 500px) {
         flex-direction: column;
@@ -77,6 +78,10 @@ main {
     font-variant-caps: all-small-caps;
     color: #000;
     text-decoration: none;
+    position: relative;
+    display: flex;
+    margin: $gutter 0;
+    flex-direction: column;
 }
 
 .title {
@@ -84,6 +89,9 @@ main {
     color: #000;
     font-weight: bold;
     font-size: 1.5rem;
+    position: relative;
+    margin: $gutter 0;
+    flex-direction: column;
 }
 
 a.lectureItem {
