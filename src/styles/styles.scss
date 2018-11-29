@@ -35,28 +35,23 @@ h1, h2, h3 {
 
 // TODO import
 
-// Adda "show" á filteruð element
-.show {
-  display: block;
-}
-
 // Útil á button
 .button {
 border: none;
 outline: none;
 padding: 12px 16px;
-background-color: #f1f1f1;
+background-color: #fcffd2;
 cursor: pointer;
 }
 
 // Grátt hover á takka
 .button:hover {
-background-color: #ddd;
+background-color: #aaa;
 }
 
 // Dökkur bakgrunnur á active takka
 .button.active {
-background-color: #666;
+background-color: #2d2;
 color: white;
 }
 
