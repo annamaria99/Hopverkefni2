@@ -7,7 +7,7 @@ main {
     padding-right: $gutter;
 }
 
-.header {
+header {
     background-image: url("../img/header.jpg");
     display: flex;
     height: 300px;
@@ -46,6 +46,10 @@ main {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+
+    @media (max-width: 500px) {
+        flex-direction: column;
+    }
 }
 
 .lectureItem {
@@ -59,5 +63,17 @@ main {
     background-color: #ccc;
 }
 
+.category {
+    font-family: $font-main;
+    font-variant-caps: all-small-caps;
+    color: #000;
+    text-decoration: none;
+}
+
+.title {
+    font-family: $font-main;
+    color: #000;
+    font-weight: bold;
+}
 
 
