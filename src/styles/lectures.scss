@@ -55,8 +55,9 @@ main {
     justify-content: space-between;
     max-width: 1200px;
 
-    @media (max-width: 500px) {
+    @media screen and (max-width: 500px) {
         flex-direction: column;
+        align-content: center;
     }
 }
 
@@ -65,7 +66,6 @@ main {
     height: 300px;
     margin-bottom: $gutter;
     display: flex;
-    word-wrap: break-word;
     flex-direction: column;
     background-color: #ccc;
     position: relative;
@@ -97,7 +97,6 @@ main {
     font-variant-caps: all-small-caps;
     color: #000;
     text-decoration: none;
-    position: relative;
     display: flex;
     margin-top: 10px;
     margin-bottom: 5px;
