@@ -30,6 +30,8 @@ Verkefnið felst í því að smíða prótótýpu af fyrirlestravef fyrir veffo
 
 Gefnar eru [fyrirmyndir](utlit/) í `500px` og `1500px` án grindar ásamt `1500px` með grind. Allt efni skal skalast snyrtilega á milli.
 
+Verkefni er að finna á slóðinni : https://notendur.hi.is/ovj3/Vefforritun/Hopverkefni2/
+
 ## Almennt
 
 Gögn eru gefin í `lectures.json` sem sækja skal með _ajax_ virkni. Keyra verður verkefnið með `browser-sync` til að það virki.
