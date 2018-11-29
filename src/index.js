@@ -34,11 +34,13 @@ function getLectures(name) {
       const title = lecture.title;
       const catelement = el('h2', 'category');
       const titleelement = el('h1', 'title');
+      const titelcateElement = el('div', 'titelcateElement');
       const headerElement = el('div', 'headerElement');
       catelement.innerText = category;
       titleelement.innerText = title;
-      headerElement.appendChild(catelement);
-      headerElement.appendChild(titleelement);
+      titelcateElement.appendChild(catelement);
+      titelcateElement.appendChild(titleelement);
+      headerElement.appendChild(titelcateElement);
       document.querySelector('header').appendChild(headerElement);
 
       // Element fyrir header Image
@@ -55,10 +57,11 @@ function getLectures(name) {
       content.forEach((item) => {
         const type = item.type;
         const data = item.data;
+        const attribute = item.attribute;
         const contentItem = el('div', `contentItem__${type}`);
         let itemData;
         if (type === 'image') {
-          itemData = el('img', 'frontImage');
+          itemData = el('img', 'fyrirlesturImage');
           itemData.setAttribute('src', `http://${baseURL}/${data}`);
           const captionText = item.caption;
           const caption = el('figcaption', 'caption');
@@ -78,8 +81,11 @@ function getLectures(name) {
         } else if (type === 'quote') {
           const quoteEle = el('blockquote', 'blockQuote');
           const pEle = el('p', 'pQuote');
+          const aEle = el('p', 'attribute');
           pEle.innerText = data;
+          aEle.innerText = attribute;
           quoteEle.appendChild(pEle);
+          quoteEle.appendChild(aEle);
           contentItem.appendChild(quoteEle);
         } else if (type === 'list') {
           const ulEle = el('ul', 'ulList');
@@ -219,8 +225,10 @@ document.addEventListener('DOMContentLoaded', () => {
       const finishText = document.querySelector('#finishText');
       if (finishText.innerHTML === '✓ Fyrirlestur kláraður') {
         document.getElementById('finishText').innerHTML = 'Klára fyrirlestur!';
+        document.getElementById('finishText').style.backgroundColor = 'white';
       } else {
         document.getElementById('finishText').innerHTML = '✓ Fyrirlestur kláraður';
+        document.getElementById('finishText').style.backgroundColor = '#2d2';
       }
     });
 
