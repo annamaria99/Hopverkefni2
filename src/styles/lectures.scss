@@ -5,19 +5,6 @@ main {
     max-width: $max-width;
 }
 
-@media (max-width: 500px) {
-    .lectureItem {
-    width: 100%;
-    flex-direction: row;
-    }
-    
-    .frontContainer {
-        width: 100%;
-        flex-wrap: nowrap;
-        flex-direction: column;
-}
-}
-
 .header {
     background-image: url("../img/header.jpg");
     display: flex;
@@ -119,4 +106,21 @@ main {
 
 a.lectureItem {
     text-decoration: none;
+}
+
+
+@media (max-width: 500px) {
+    .lectureItem {
+    width: 92%;
+    max-width: 100%;
+    flex-direction: row;
+    margin: $gutter;
+    }
+    
+    .frontContainer {
+        width: 100%;
+        max-width: 100%;
+        flex-wrap: nowrap;
+        flex-direction: column;
+}
 }

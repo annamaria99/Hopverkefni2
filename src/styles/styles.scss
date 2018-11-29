@@ -11,10 +11,6 @@
   box-sizing: inherit;
 }
 
-@media screen and (max-width: 500px) {
-
-}
-
 html { /* stylelint-disable-line */
   box-sizing: border-box;
   overflow-x: hidden;
@@ -174,4 +170,11 @@ color: white;
 .contentItem__code {
   width: 100%;
   margin-bottom: $gutter;
+}
+
+@media screen and (max-width: 500px) {
+  .container {
+    width: 92%;
+    max-width: 100%;
+  }
 }
