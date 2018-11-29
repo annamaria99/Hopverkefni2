@@ -5,6 +5,17 @@ main {
     max-width: $max-width;
 }
 
+@media screen and (max-width: 500px) {
+    .lectureItem {
+    width: 100%;
+    }
+    
+    .frontContainer {
+        width: 100%;
+        flex-wrap: nowrap;
+}
+}
+
 .header {
     background-image: url("../img/header.jpg");
     display: flex;
@@ -48,17 +59,13 @@ main {
     background-color: #ccc;
 }
 
+
 .frontContainer {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
     max-width: 1200px;
-
-    @media screen and (max-width: 500px) {
-            width: 100%;
-            flex-wrap: nowrap;
-    }
 }
 
 .lectureItem {
@@ -71,11 +78,6 @@ main {
     position: relative;
     overflow: hidden;
 }
-    /* Þarf að fá þetta til að virka rétt!!
-    @media (max-width: 500px) {
-    
-    }
-}*/
 
 .thumbnail {
     width: 100%;

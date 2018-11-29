@@ -11,16 +11,16 @@
   box-sizing: inherit;
 }
 
+@media screen and (max-width: 500px) {
+
+}
+
 html { /* stylelint-disable-line */
   box-sizing: border-box;
   overflow-x: hidden;
   overflow-y: scroll; // alltaf hafa y skrollbar
   font-family: $font-main;
   font-size: 16px;
-  @media screen and (max-width: 1500px) {
-    html { 
-      max-width: 1500px;
-    }
 }
 
 img { /* stylelint-disable-line */
@@ -121,13 +121,7 @@ color: white;
   right: 0;
 
   margin: auto;
-
-/* Þarf að klára!!
-@media screen and (max-width: 500px) {
-  .container { 
-   
-  }
-}*/
+}
 
 .contentItem__youtube {
   width: 100%;
@@ -180,6 +174,4 @@ color: white;
 .contentItem__code {
   width: 100%;
   margin-bottom: $gutter;
-}
-}
 }
