@@ -56,8 +56,8 @@ main {
     max-width: 1200px;
 
     @media screen and (max-width: 500px) {
-        flex-direction: column;
-        align-content: center;
+            width: 100%;
+            flex-wrap: nowrap;
     }
 }
 
@@ -70,7 +70,7 @@ main {
     background-color: #ccc;
     position: relative;
     overflow: hidden;
-
+}
     /* Þarf að fá þetta til að virka rétt!!
     @media (max-width: 500px) {
     
@@ -115,5 +115,4 @@ main {
 
 a.lectureItem {
     text-decoration: none;
-}
 }
