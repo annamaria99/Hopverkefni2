@@ -3,6 +3,7 @@
 ## Til að keyra verkefnið:
 
 npm install concurrently --save-dev
+
 npm run dev
 
 ## Uppsetning verkefnis
