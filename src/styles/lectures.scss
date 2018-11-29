@@ -3,8 +3,6 @@
 main {
     margin: 0 auto;
     max-width: $max-width;
-    padding-left: $gutter;
-    padding-right: $gutter;
 }
 
 .header {
@@ -55,6 +53,7 @@ main {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+    max-width: 1200px;
 
     @media (max-width: 500px) {
         flex-direction: column;
@@ -62,14 +61,35 @@ main {
 }
 
 .lectureItem {
-    width: 350px;
+    width: 32%;
     height: 300px;
     margin-bottom: $gutter;
-    margin-right: $gutter;
     display: flex;
     word-wrap: break-word;
     flex-direction: column;
     background-color: #ccc;
+    position: relative;
+    overflow: hidden;
+
+    /* Þarf að fá þetta til að virka rétt!!
+    @media (max-width: 500px) {
+    
+    }
+}*/
+
+.thumbnail {
+    width: 100%;
+    height: 80%;
+    margin: 0;
+}
+
+.titleCategory {
+    width: 100%;
+    height: 20%;
+    position: absolute;
+    bottom: 0;
+    margin: 0;
+    padding-left: $gutter;
 }
 
 .category {
@@ -79,7 +99,8 @@ main {
     text-decoration: none;
     position: relative;
     display: flex;
-    margin: $gutter 0;
+    margin-top: 10px;
+    margin-bottom: 5px;
     flex-direction: column;
 }
 
@@ -89,12 +110,11 @@ main {
     font-weight: bold;
     font-size: 1.5rem;
     position: relative;
-    margin: $gutter 0;
+    margin-bottom: $gutter;
     flex-direction: column;
 }
 
 a.lectureItem {
     text-decoration: none;
 }
-
-
+}
