@@ -7,7 +7,7 @@ main {
     padding-right: $gutter;
 }
 
-header {
+.header {
     background-image: url("../img/header.jpg");
     display: flex;
     height: 300px;
@@ -25,6 +25,14 @@ header {
     font-family: $font-title;
 }  
 
+.header__web {
+    font-variant-caps: all-small-caps;
+    letter-spacing: 2px;
+}  
+
+.header__lectures {
+    letter-spacing: 5px;
+}
 
 .buttons {
     display: flex;
@@ -74,6 +82,11 @@ header {
     font-family: $font-main;
     color: #000;
     font-weight: bold;
+    font-size: 1.5rem;
+}
+
+a.lectureItem {
+    text-decoration: none;
 }
 
 
